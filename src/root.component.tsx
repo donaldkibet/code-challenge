@@ -7,6 +7,7 @@ const Root: React.FC = () => {
       <h2>Root Component</h2>
       <h3>Code Challenge Repo</h3>
       <h4>Data Structures and Algorithm</h4>
+      <h5>Use of Husky and Prettier for code formating</h5>
     </div>
   );
 };
