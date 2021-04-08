@@ -1,0 +1,9 @@
+{
+  "transform": {
+    "\\.[jt]sx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(s?css)$": "identity-obj-proxy"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
+}
