@@ -1,0 +1,29 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+  runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v2
+    - name: use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: "14.x"
+    - run: yarn install
+    - run: yarn lint
+    - run: yarn test
+    - run: yarn build --if-present
+    - name: Upload Artifacts
+      uses: actions/upload-artifacts@v2
+      with:
+        name: dist
+        path: |
+          dist
